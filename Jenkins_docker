@@ -1,10 +1,20 @@
 
-node {
-    withCredentials([string(credentialsId: 'secret_text', variable: 'SECRET')]) 
-    {
-    // some block
-    echo 'the secret text is $SECRET'
-    }
-
-    bat 'docker build -t test_image .'
+pipeline{
+  agent{
+         dockerfile true
+         }
+  stages{
+        stage('Example')
+        {
+          steps{
+                 echo 'Hello World'
+               }
+        }
+        stage('Build Docker')
+        {
+          steps{
+                 bat 'docker build -t test_image .'
+               }
+        }
+  }
 }
