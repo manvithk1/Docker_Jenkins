@@ -1,7 +1,10 @@
 
-withCredentials([string(credentialsId: 'secret_text', variable: 'SECRET')]) {
+node {
+    withCredentials([string(credentialsId: 'secret_text', variable: 'SECRET')]) 
+    {
     // some block
     echo 'the secret text is $SECRET'
-}
+    }
 
-docker build -t test_image .
+    docker build -t test_image .
+}
