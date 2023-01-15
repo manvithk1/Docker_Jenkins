@@ -6,5 +6,5 @@ node {
     echo 'the secret text is $SECRET'
     }
 
-    docker build -t test_image .
+    bat 'docker build -t test_image .'
 }
