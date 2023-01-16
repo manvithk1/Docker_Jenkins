@@ -13,7 +13,7 @@ pipeline{
         stage('Build Docker')
         {
           steps{
-                 sh 'DOCKER_BUILDKIT=0 docker build -t test_image .'
+                 sh 'docker build -t getting-started .'
                }
         }
   }
