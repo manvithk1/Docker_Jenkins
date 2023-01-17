@@ -14,8 +14,8 @@ pipeline{
         {
           steps{
                  sh '''
-                       docker build -t my-bash-app .
-                       docker run -it --rm --name my-running-app my-bash-app
+                       docker run hello-world
+                       docker logs hello-world
                  '''
                }
         }
