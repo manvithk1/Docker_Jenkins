@@ -13,7 +13,6 @@ pipeline{
         stage('Build Docker')
         {
           steps{
-                 sh 'powershell'
                  sh 'docker run ubuntu'
                  sh 'docker build -t myimage1:1.01 .'
                  sh 'docker run myimage1:1.01'
