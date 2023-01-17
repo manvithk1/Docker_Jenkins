@@ -14,7 +14,9 @@ pipeline{
         {
           steps{
                  sh '''
-                       docker run myimage
+                       docker run ubuntu
+                       docker build -t myimage1:1.01 .
+                       docker run myimage1:1.01
                  '''
                }
         }
