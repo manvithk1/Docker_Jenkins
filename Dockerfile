@@ -1,3 +1,5 @@
+RUN docker pull bash
+
 FROM bash:4.4
 
 COPY script.sh /
