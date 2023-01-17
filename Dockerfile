@@ -1,7 +1,4 @@
-RUN docker pull bash
-
-FROM bash:4.4
-
-COPY script.sh /
-
-CMD ["bash", "/script.sh"]
+FROM ubuntu:16.04
+MAINTAINER manvith kumbla - manvithk@yahoo.com
+RUN apt-get update
+CMD ["echo","Hello my name is Manvith"]
