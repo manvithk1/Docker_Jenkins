@@ -1,4 +1,13 @@
-FROM ubuntu
-MAINTAINER manvith kumbla - manvithk@yahoo.com
-RUN apt-get update
-RUN echo "Hello my name is Manvith"
+FROM node:14
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD [ "node", "app.mjs" ]
